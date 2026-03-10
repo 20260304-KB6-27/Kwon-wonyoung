@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function callTimes(callback, N) {
+        for (let i = 0; i < N; i++) {
+          callback();
+        }
+      }
+
+      callTimes(function () {
+        alert('함수 호출');
+      }, 3);
+    </script>
+  </head>
+  <body></body>
+</html>

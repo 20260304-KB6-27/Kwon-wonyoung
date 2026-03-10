@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+
+        eat(food) {
+          console.log(this.name + '이 ' + food + '을/를 먹습니다.');
+        }
+      }
+
+      let person = {
+        name: '유인성',
+        eat: function (food) {
+          console.log(this.name + '이 ' + food + '을/를 먹습니다.');
+        },
+      };
+
+      person.eat('밥');
+    </script>
+  </head>
+  <body></body>
+</html>
