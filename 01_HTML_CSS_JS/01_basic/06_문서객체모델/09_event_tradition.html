@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script스니펫</title>
+  <script>
+    window.onload = function () {
+      const button = document.getElementById("button")
+
+      button.onclick = function () {
+        alert(`${this}`)
+      }
+    };
+
+    /*
+    
+    this
+    객체 in this -> 그 객체
+    이벤트핸들러 -> 이벤트가 발생한 요소
+    일반함수 -> window 
+
+    */
+  </script>
+</head>
+
+<body>
+  <button id="button">버 튼</button>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Script스니펫</title>
+  <script>
+    window.onload = function () {
+      let output = '';
+      for(let i=0; i <= 9; i++){
+        output += `<h1>Header - ${i}</h1>`
+      }
+
+      const header = document.getElementById('header');
+      header.innerText = output;
+
+    };
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+</body>
+
+</html>
