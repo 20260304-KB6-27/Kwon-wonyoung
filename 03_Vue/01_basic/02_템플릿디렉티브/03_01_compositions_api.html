@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 3 연습용 Composition</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h2>일반 메시지 : {{ normalMessage }}</h2>
+        <h2>반응형 메시지 : {{ message }}</h2>
+        <h2>현재 시간 : {{ currentTime }}</h2>
+      </div>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+      createApp({
+        // Composition API 특
+        setup() {
+          const normalMessage = '일반메시지입니다.';
+
+          // ref(): 반응형 데이터를 만들기 위한 wrapper 함수
+          const message = ref('안녕하세요 Vue');
+          const currentTime = ref(new Date().toLocaleTimeString());
+
+          // 컴포넌트가 마운트 되었을 때
+          onMounted(() => {
+            setInterval(() => {
+              currentTime.value = new Date().toLocaleTimeString();
+            }, 1000);
+          });
+
+          return {
+            normalMessage,
+            message,
+            currentTime,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

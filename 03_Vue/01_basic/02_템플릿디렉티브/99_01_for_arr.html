@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 3 연습용 Composition</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <!-- key: index는 비추-->
+        <li v-for="(fruit, index) in fruits" :key="index">
+          {{index}} : {{fruit}}
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          const fruits = ref(['사과', '배', '포도']);
+          return {
+            fruits,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
