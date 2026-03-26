@@ -5,6 +5,10 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineOptions({
+  name: 'CoralSeaTab',
+});
+</script>
 
 <style scoped></style>
