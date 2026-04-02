@@ -1,5 +1,9 @@
 import Home from '@/pages/Home.vue';
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from 'vue-router';
 
 /*
   네비게이션 가드(beforeEnter)
@@ -13,8 +17,8 @@ const membersIdGuard = (to, from) => {
   }
 };
 const router = createRouter({
-  // history: createWebHistory(import.meta.env.BASE_URL),
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -35,6 +39,33 @@ const router = createRouter({
       component: () => import('@/pages/MemberInfo.vue'),
       // members에서만 접근해야 상세정보를 볼 수 있게 설정
       beforeEnter: membersIdGuard,
+    },
+    {
+      /*
+      중첩 라우팅
+      - 부모 컴포넌트 안에 <RouterView>를 두고 children 배열로 자식 라우트를 정의 
+      - 자식 컴포넌트는 부모의 <RouterView> 위치에 랜더링
+       */
+      path: '/members-nested',
+      component: () => import('@/pages/nested/MembersLayout.vue'),
+      children: [
+        {
+          // 기본값: /members-nested
+          path: '',
+          name: 'members-nested',
+          // 지연로딩: 해당 경로에 처음 접근할 때 컴포넌트를 불러옴
+          // 초기로딩 속도 개선
+          component: () => import('@/pages/nested/MemberDefault.vue'),
+        },
+        {
+          // members-nested/:id
+          path: ':id',
+          name: 'members-nested/detail',
+          // 지연로딩: 해당 경로에 처음 접근할 때 컴포넌트를 불러옴
+          // 초기로딩 속도 개선
+          component: () => import('@/pages/nested/MemberDetail.vue'),
+        },
+      ],
     },
   ],
 });
