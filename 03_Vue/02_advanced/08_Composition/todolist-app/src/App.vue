@@ -47,6 +47,8 @@ const addTodo = (todo) => {
     completed: false,
   });
 };
+
+
 </script>
 
 <style scoped></style>

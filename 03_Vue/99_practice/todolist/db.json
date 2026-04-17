@@ -1,0 +1,10 @@
+{
+  "todos": [
+    {
+      "todo": "집에 가기",
+      "completed": false,
+      "id": "ydj82CBYbbQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

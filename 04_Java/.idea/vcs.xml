@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch01-variable-type-operator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch02-conditional-loop-reference" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch03-class" vcs="Git" />
+  </component>
+</project>
