@@ -1,8 +1,13 @@
 package basic.ch07.sec08.exam02;
 
+
+// 코드 수정을 안했음
 public class Driver {
 
+    // 메서드 -> 의존 관계
 
+    // 개방 폐쇄법칙
+    // 확장에는 열려있고, 수정에는 닫혀있는 구조
     public void drive(Vehicle vehicle) {
         vehicle.run();
     }

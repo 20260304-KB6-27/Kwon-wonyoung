@@ -1,21 +1,22 @@
 package basic.lecture.exam;
 
 public class Database {
-    /*
-     * 싱클톤 패턴
-     * - 애플리케이션에서 하나의 객체만 생성되도록 보장하는 디자인 패턴
-     * - 동일한 인스턴스를 공유해서 사용
-     * */
 
-    private String connetion = "MYSQL";
+    /*
+    * 싱글톤 패턴
+    * - 어플리케이션에서 하나의 객체만 생성되도록 보장하는 디자인 패턴
+    * - 동일한 인스턴스를 공유해서 사용
+    * */
+    private String connection = "MYSQL";
 
     // 객체를 만들지 않아도 사용가능
     private static Database database = new Database();
 
+    // 기본생성자를 private으로 접근못하게 막음
     private Database() {
     }
 
-    // static 메서드로 인스턴스 변환
+    // static 메소드로 인스턴스 반환
     public static Database getInstance() {
         return database;
     }

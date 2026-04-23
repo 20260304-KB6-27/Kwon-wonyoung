@@ -1,8 +1,10 @@
 package basic.lecture;
 
 public class Student {
+
     String name;
-    public Grade grade;
+
+    Grade grade;
 
     public Student(String name, Grade grade) {
         this.name = name;

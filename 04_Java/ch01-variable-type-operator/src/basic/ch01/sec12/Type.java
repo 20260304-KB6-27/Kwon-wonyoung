@@ -1,11 +1,12 @@
 package basic.ch01.sec12;
 
 public class Type {
+
     public static void main(String[] args) {
-        /*
-        *  자료형
-        *  다양한 값의 형태별로 어느정도의 크기를 하나의 값으로 취급할지 컴파일러와 약속된 키워드
-        * */
+
+        // 자료형
+        // 다양한 값의 형태별로 어느정도의 크기를 하나의 값으로 취급할지
+        // 컴파일러와 약속된 키워드
 
         // 기본 자료형
         // 정수
@@ -15,14 +16,17 @@ public class Type {
         long lnum = 1L;  // 8byte
 
         // 실수
-        float fnum = 4.0f;     // 4byte
-        double dnum = 8.0;    // 8byte 실수형 기본
+        float fnum = 4.0f; // 4byte
+        double dnum = 8.0; // 8byte 실수형 기본
 
         // 문자
-        char ch;    // 2byte
+        char ch; // 2byte
 
         // 논리값
-        boolean isTrue = true;     // 1byte
+        boolean isTrue = true; // true / false 1byte
+
+        // soutv 스니펫
+        System.out.println("isTrue = " + isTrue);
 
         // print
         System.out.print("안녕");
@@ -31,7 +35,7 @@ public class Type {
         System.out.println();
         System.out.println("안녕");
         System.out.println("안녕");
-        System.out.println("isTrue = " + isTrue);
+
 
 
     }
