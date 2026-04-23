@@ -5,15 +5,17 @@ import lombok.*;
 
 // DTO => 데이터 전달용 객체
 // Getter, Setter, NoArgsConstructor, AllArgsConstructor, ToString
-@Getter
-@Setter
-@NoArgsConstructor
+//@Getter
+//@Setter
+//@ToString
+//@NoArgsConstructor
+
+@Data   // Getter, Setter, ToString, EqualHashCode, RequireArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Student {
 
-    private int no;
     private String name;
+    private int no;
 
 //    public Student() {
 //    }
@@ -47,3 +49,5 @@ public class Student {
 //                '}';
 //    }
 }
+
+
